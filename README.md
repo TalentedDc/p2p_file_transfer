@@ -1,8 +1,8 @@
-Smart Hospital Appointment and Ward Management System
+## Smart Hospital Appointment and Ward Management System
 CPE310 - Object-Oriented Programming with Python | Capstone Project
 Computer Engineering, Federal University Oye-Ekiti | 2025/2026 Session
 
-## Featured Project — 
+## Project Tiltle and Overview
 A Python OOP system modelling administrative and clinical operations for a medium-sized Nigerian tertiary hospital. The system addresses paper-based workflows that commonly cause appointment clashes, lost prescriptions, and billing disputes by automating patient intake, scheduling, ward allocation, prescriptions, diagnostics, and billing with NHIS support.
 
 Why it matters

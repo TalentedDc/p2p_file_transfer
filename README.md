@@ -44,7 +44,7 @@ A table with examples and where they appear in the code. (Ensure each Week 1–5
 | Cohesion & SRP (BillingService computes itemised bills only) | src/services/billing_service.py | Week 5 |
 
 ## System Architecture
-- Embed UML class diagram image: uml/class_diagram.png (also include source at uml/class_diagram.puml).
+[System Architecture](uml/class_diagram.png)
 - High-level description (5–7 sentences):
   - The system follows a layered architecture separating domain models (src/models), business services (src/services), persistence/repositories, scripts for seeding/demo, and tests. Domain objects (Patient, NHISAccount, Staff, Ward, Bed, Prescription, Bill) encapsulate data and related behaviors. Services implement workflows (scheduling, ward allocation, prescriptions, billing) and coordinate model interactions. Composition is used for Ward→Bed (Ward "owns" Bed objects). Aggregation is used where Patient references but does not own external resources (e.g., historical records stored externally). The persistence layer is abstracted so the project can use SQLite for demo and PostgreSQL for production. Design choices favor high cohesion and single responsibility per class.
 

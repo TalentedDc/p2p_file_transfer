@@ -34,7 +34,6 @@ Core features
     - Abioye Gideon - CPE/2023/1112 - @Gsp149
     
 ## OOP Concepts Demonstrated
-A table with examples and where they appear in the code. (Ensure each Week 1–5 concept appears at least once.)
 
 | OOP Concept | Location in Code (file / class / lines) | Week |
 |-------------|------------------------------------------|------|
@@ -74,8 +73,6 @@ Exact commands to clone the repo, create venv, install deps, seed demo, and run 
 
 
 ## Sample Output
-Paste at least 8 lines of real console output showing the system working (example demo run):
-
 ```
 [INFO] 2026-06-19 10:00:00 - Creating demo NHIS account for patient NG-000123
 [INFO] 2026-06-19 10:00:01 - Registered Patient: John Doe (NHIS: NG-000123) — PatientID: P0001

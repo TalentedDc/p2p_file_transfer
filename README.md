@@ -31,6 +31,7 @@ Core features
     - Owolabi Charles Kayode - CPE/2023/1100 - @64ytr5r6v9-spec
     - Sofoluwe Oreoluwa Ebenezer - CPE/2023/1109 - @dev-ore911
     - Abioye Gideon - CPE/2023/1112 - @Gsp149
+    - Oyeyipo Olaoluwa Anthony - CPE/2023/1103 - OLAOLUWA2740
     
 ## OOP Concepts Demonstrated
 

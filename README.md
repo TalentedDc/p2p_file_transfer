@@ -1,4 +1,4 @@
-## Smart Hospital Appointment and Ward Management System
+# Smart Hospital Appointment and Ward Management System
 CPE310 - Object-Oriented Programming with Python | Capstone Project
 Computer Engineering, Federal University Oye-Ekiti | 2025/2026 Session
 

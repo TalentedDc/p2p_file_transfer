@@ -1,4 +1,7 @@
-## Featured Project — Smart Hospital Appointment and Ward Management System
+CPE310 - Object-Oriented Programming with Python | Capstone Project Group 8
+Computer Engineering, Federal University Oye-Ekiti | 2025/2026 Session
+
+## Project Tiltle and Overview:  Smart Hospital Appointment and Ward Management System
 A Python OOP system modelling administrative and clinical operations for a medium-sized Nigerian tertiary hospital. The system addresses paper-based workflows that commonly cause appointment clashes, lost prescriptions, and billing disputes by automating patient intake, scheduling, ward allocation, prescriptions, diagnostics, and billing with NHIS support.
 
 Why it matters
@@ -28,29 +31,30 @@ Core features
     - Owolabi Charles Kayode - CPE/2023/1100 - @64ytr5r6v9-spec
     - Sofoluwe Oreoluwa Ebenezer - CPE/2023/1109 - @dev-ore911
     - Abioye Gideon - CPE/2023/1112 - @Gsp149
+    - Oyeyipo Olaoluwa Anthony - CPE/2023/1103 - OLAOLUWA2740
     
 ## OOP Concepts Demonstrated
-A table with examples and where they appear in the code. (Ensure each Week 1–5 concept appears at least once.)
 
 | OOP Concept | Location in Code (file / class / lines) | Week |
-|-------------|------------------------------------------|------|
-| Encapsulation (properties & validation) | src/models/patient.py : class Patient (@property validators for nhis_id, contact) | Week 1 |
-| Inheritance (Staff hierarchy) | src/models/staff.py : class Staff -> class Doctor, Nurse, Admin | Week 2 |
-| Polymorphism (Appointment handlers) | src/services/scheduling_service.py : AppointmentHandler subclasses for Walk-in vs Booked | Week 3 |
-| Composition (Ward contains Beds) | src/models/ward.py : Ward has list[Bed] -> Bed objects created/managed by Ward | Week 3 |
-| Aggregation (Patient ↔ Prescription history) | src/models/prescription.py : Prescription stored in Patient.prescriptions list | Week 4 |
-| Association (Patient — NHISAccount) | src/models/nhis_account.py and src/models/patient.py | Week 2 |
-| Abstraction (BaseService) | src/services/base_service.py : BaseService abstract class for common service methods | Week 1 |
-| Cohesion & SRP (BillingService computes itemised bills only) | src/services/billing_service.py | Week 5 |
+| --- | --- | --- |
+| Classes & Objects | `person.py`, `patient.py`, `doctor.py`, `nurse.py`, `consultant.py`, `ward.py`, `bed.py`, `bill.py`, `appointment.py` | 1 |
+| Encapsulation | `patient.py`: `__nhis_number` private, `@property hospital_number` getter | 2 |
+| Inheritance & ABC | `person.py`: `Person(ABC)` base class, `abstractmethod work()` | 3 |
+| Multiple Inheritance | `consultant.py`: `Consultant(DepartmentHeadMixin, Doctor)`, `Consultant.mro()` | 3 |
+| Polymorphism/Duck Typing | `appointment.py`: `__lt__` for sorting, `bill.py`: `Bill.__add__` operator overloading | 4 |
+| Composition/Aggregation | `ward.py`: Composition `Ward` owns `Bed` objects, `appointment.py`: Aggregation Patient-Doctor | 5 |
 
 ## System Architecture
 [System Architecture](uml/class_diagram.png)
+<<<<<<< HEAD
+=======
+
+>>>>>>> e08142ac2833c335fae022afe035dff522d0cff2
 - High-level description (5–7 sentences):
   - The system follows a layered architecture separating domain models (src/models), business services (src/services), persistence/repositories, scripts for seeding/demo, and tests. Domain objects (Patient, NHISAccount, Staff, Ward, Bed, Prescription, Bill) encapsulate data and related behaviors. Services implement workflows (scheduling, ward allocation, prescriptions, billing) and coordinate model interactions. Composition is used for Ward→Bed (Ward "owns" Bed objects). Aggregation is used where Patient references but does not own external resources (e.g., historical records stored externally). The persistence layer is abstracted so the project can use SQLite for demo and PostgreSQL for production. Design choices favor high cohesion and single responsibility per class.
 
 # How to Run
-Exact commands to clone the repo, create venv, install deps, seed demo, and run tests.
-- Clone the repo:
+```bash
   - git clone https://github.com/TalentedDc/Smart-Hospital-Appointment-and-Ward-Management-System
   - cd smart-hospital-management-system
 
@@ -67,7 +71,12 @@ Exact commands to clone the repo, create venv, install deps, seed demo, and run 
 # Run tests suite:
   - pytest -q
 
+<<<<<<< HEAD
 ## Sample Output
+=======
+
+##Sample Output:
+>>>>>>> e08142ac2833c335fae022afe035dff522d0cff2
 ```
 [INFO] 2026-06-19 10:00:00 - Creating demo NHIS account for patient NG-000123
 [INFO] 2026-06-19 10:00:01 - Registered Patient: John Doe (NHIS: NG-000123) — PatientID: P0001
@@ -80,6 +89,8 @@ Exact commands to clone the repo, create venv, install deps, seed demo, and run 
 [INFO] 2026-06-19 10:00:08 - Medication dispensed: Pharmacy confirmed RX0009 — qty dispensed: 7
 [INFO] 2026-06-19 10:00:10 - Discharge summary generated for Patient P0001 — Records archived
 ```
+
+
 
 ## Known Limitations
 - NHIS integration is simulated for demo; production requires secure API integration and authentication with NHIS services.
